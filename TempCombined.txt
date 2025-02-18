@@ -1,0 +1,487 @@
+
+================================================================================
+File: components\Features.astro
+================================================================================
+
+---
+// Features.astro component
+---
+
+<section class="features py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Key Features</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="feature-card p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-4">Email Verification</h3>
+        <p class="text-gray-600">Ensure your email list is clean and valid with our powerful verification system.</p>
+      </div>
+      <div class="feature-card p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-4">Real-time Validation</h3>
+        <p class="text-gray-600">Instantly validate emails as they're added to your list.</p>
+      </div>
+      <div class="feature-card p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-4">Bounce Prevention</h3>
+        <p class="text-gray-600">Reduce bounce rates and protect your sender reputation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature-card {
+    transition: transform 0.2s ease-in-out;
+  }
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+</style>
+
+
+
+================================================================================
+File: components\Welcome.astro
+================================================================================
+
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+---
+
+<div id="container">
+	<img id="background" src={background.src} alt="" fetchpriority="high" />
+	<main>
+		<section id="hero">
+			<a href="https://astro.build"
+				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
+			>
+			<h1>
+				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
+			</h1>
+			<section id="links">
+				<a class="button" href="https://docs.astro.build">Read our docs</a>
+				<a href="https://astro.build/chat"
+					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
+						><path
+							fill="currentColor"
+							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
+						></path></svg
+					>
+				</a>
+			</section>
+		</section>
+	</main>
+
+	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
+		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
+			><path
+				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
+				fill="#111827"></path></svg
+		>
+		<h2>What's New in Astro 5.0?</h2>
+		<p>
+			From content layers to server islands, click to learn more about the new features and
+			improvements in Astro 5.0
+		</p>
+	</a>
+</div>
+
+<style>
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: blur(100px);
+	}
+
+	#container {
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		height: 100%;
+	}
+
+	main {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	#hero {
+		display: flex;
+		align-items: start;
+		flex-direction: column;
+		justify-content: center;
+		padding: 16px;
+	}
+
+	h1 {
+		font-size: 22px;
+		margin-top: 0.25em;
+	}
+
+	#links {
+		display: flex;
+		gap: 16px;
+	}
+
+	#links a {
+		display: flex;
+		align-items: center;
+		padding: 10px 12px;
+		color: #111827;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+
+	#links a:hover {
+		color: rgb(78, 80, 86);
+	}
+
+	#links a svg {
+		height: 1em;
+		margin-left: 8px;
+	}
+
+	#links a.button {
+		color: white;
+		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+		box-shadow:
+			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
+		border-radius: 10px;
+	}
+
+	#links a.button:hover {
+		color: rgb(230, 230, 230);
+		box-shadow: none;
+	}
+
+	pre {
+		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
+			'DejaVu Sans Mono', monospace;
+		font-weight: normal;
+		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin: 0;
+	}
+
+	h2 {
+		margin: 0 0 1em;
+		font-weight: normal;
+		color: #111827;
+		font-size: 20px;
+	}
+
+	p {
+		color: #4b5563;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.006em;
+		margin: 0;
+	}
+
+	code {
+		display: inline-block;
+		background:
+			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
+			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
+		border-radius: 8px;
+		border: 1px solid transparent;
+		padding: 6px 8px;
+	}
+
+	.box {
+		padding: 16px;
+		background: rgba(255, 255, 255, 1);
+		border-radius: 16px;
+		border: 1px solid white;
+	}
+
+	#news {
+		position: absolute;
+		bottom: 16px;
+		right: 16px;
+		max-width: 300px;
+		text-decoration: none;
+		transition: background 0.2s;
+		backdrop-filter: blur(50px);
+	}
+
+	#news:hover {
+		background: rgba(255, 255, 255, 0.55);
+	}
+
+	@media screen and (max-height: 368px) {
+		#news {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		#container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#hero {
+			display: block;
+			padding-top: 10%;
+		}
+
+		#links {
+			flex-wrap: wrap;
+		}
+
+		#links a.button {
+			padding: 14px 18px;
+		}
+
+		#news {
+			right: 16px;
+			left: 16px;
+			bottom: 2.5rem;
+			max-width: 100%;
+		}
+
+		h1 {
+			line-height: 1.5;
+		}
+	}
+</style>
+
+
+
+================================================================================
+File: layouts\Layout.astro
+================================================================================
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+================================================================================
+File: pages\index.astro
+================================================================================
+
+---
+import { Icon } from 'astro-icon/components'
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="viewport" content="width=device-width" />
+      <meta name="generator" content={Astro.generator} />
+      <title>Mailfloss - Keep Your Email List Clean & Healthy</title>
+    </head>
+    <body class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <!-- Hero Section -->
+      <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+          <div class="flex items-center space-x-2">
+            <Icon name="lucide:mail" class="w-8 h-8" />
+            <span class="text-2xl font-bold">Mailfloss</span>
+          </div>
+          <a
+            href="https://getmailfloss.com"
+            class="bg-white text-indigo-600 px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all"
+          >
+            Start Free Trial
+          </a>
+        </nav>
+
+        <div class="container mx-auto px-6 py-24 text-center">
+          <h1 class="text-5xl md:text-6xl font-bold mb-8">
+            Keep Your Email List
+            <span class="block text-blue-200">Clean & Healthy</span>
+          </h1>
+          <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto text-blue-100">
+            Automatically remove invalid, fake, and misspelled email addresses to improve deliverability and engagement.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="https://getmailfloss.com"
+              class="bg-white text-indigo-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
+            >
+              Start 7-Day Free Trial <Icon name="lucide:arrow-right" class="w-5 h-5" />
+            </a>
+            <a
+              href="https://getmailfloss.com"
+              class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-indigo-600 transition-all"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Features Grid -->
+      <section class="py-20 px-6">
+        <div class="container mx-auto">
+          <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">
+            Powerful Features for Email List Management
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {
+              [
+                {
+                  icon: 'lucide:zap',
+                  title: 'Instafloss',
+                  description: 'Clean and verify new email lists in real-time with instant results.'
+                },
+                {
+                  icon: 'lucide:shield',
+                  title: 'Decay Protection',
+                  description: 'Automatically clean your entire email list monthly to maintain quality.'
+                },
+                {
+                  icon: 'lucide:check-circle',
+                  title: 'Typo Fixer',
+                  description: 'Automatically correct misspellings of common email services.'
+                },
+                {
+                  icon: 'lucide:settings',
+                  title: 'Auto-actions',
+                  description: 'Automatically unsubscribe, delete, or update invalid email addresses.'
+                },
+                {
+                  icon: 'lucide:refresh-cw',
+                  title: 'Autofloss',
+                  description: 'Daily cleaning of new email addresses to maintain list hygiene.'
+                },
+                {
+                  icon: 'lucide:sparkles',
+                  title: 'Advanced Features',
+                  description: 'Blacklist/whitelist options, custom filtering, and webhook integration.'
+                }
+              ].map((feature) => (
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                  <div class="bg-blue-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                    <Icon name={feature.icon} class="w-8 h-8 text-blue-500" />
+                  </div>
+                  <h3 class="text-xl font-bold mb-4 text-gray-800">{feature.title}</h3>
+                  <p class="text-gray-600">{feature.description}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="bg-gray-50 py-20 px-6">
+        <div class="container mx-auto">
+          <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-4xl font-bold mb-6 text-gray-800">
+              Why Choose Mailfloss?
+            </h2>
+            <p class="text-xl text-gray-600">
+              Join thousands of businesses that trust Mailfloss to maintain their email list quality
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            {
+              [
+                {
+                  icon: 'lucide:building',
+                  title: 'For Businesses of All Sizes',
+                  description: 'Whether you\'re an e-commerce store, agency, or enterprise, Mailfloss scales with your needs.'
+                },
+                {
+                  icon: 'lucide:check-circle-2',
+                  title: 'Improved Deliverability',
+                  description: 'Prevent emails from landing in spam folders and maintain a strong sender reputation.'
+                },
+                {
+                  icon: 'lucide:clock',
+                  title: 'Save Time & Money',
+                  description: 'Automate list cleaning and reduce costs with your email service provider.'
+                },
+                {
+                  icon: 'lucide:zap',
+                  title: '35+ Integrations',
+                  description: 'Works seamlessly with all popular email service providers.'
+                }
+              ].map((benefit) => (
+                <div class="flex items-start gap-4 bg-white p-6 rounded-xl shadow-md">
+                  <div class="bg-blue-50 p-3 rounded-lg">
+                    <Icon name={benefit.icon} class="w-6 h-6 text-blue-500" />
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800">{benefit.title}</h3>
+                    <p class="text-gray-600">{benefit.description}</p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-20 px-6 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div class="container mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-6">Ready to Clean Your Email List?</h2>
+          <p class="text-xl mb-8 text-blue-100">
+            Start your 7-day free trial today. 30-day money-back guarantee if deliverability doesn't improve.
+          </p>
+          <a
+            href="https://getmailfloss.com"
+            class="inline-flex items-center gap-2 bg-white text-indigo-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all"
+          >
+            Get Started Now <Icon name="lucide:arrow-right" class="w-5 h-5" />
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-gray-900 text-gray-400 py-12 px-6">
+        <div class="container mx-auto">
+          <div class="flex items-center justify-center gap-2 mb-8">
+            <Icon name="lucide:mail" class="w-8 h-8" />
+            <span class="text-2xl font-bold text-white">Mailfloss</span>
+          </div>
+          <p class="text-center">
+            {new Date().getFullYear()} Mailfloss. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </body>
+  </html>
+</Layout>
+
+
+
+
+create a header navigation bar with the following components: Icon, Mailfloss, Start Free Trial, and Learn More. The navigation bar should be styled with a gradient background from blue to indigo and centered on the page. The navigation bar should also have a responsive design that adjusts to different screen sizes. The navigation bar should be placed at the top of the page and should be visible to

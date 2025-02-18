@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<Layout title="About Us - MailFloss" description="Learn about MailFloss's mission to provide the best email verification service">
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-primary-50 to-white pt-16 pb-32">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-6xl font-bold text-primary-900 mb-6">
+            About MailFloss
+          </h1>
+          <p class="text-xl text-primary-700 mb-8">
+            Revolutionizing Email List Management with Advanced Verification Technology
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-primary-900 mb-6">Our Mission</h2>
+          <p class="text-lg text-primary-700 mb-8">
+            At MailFloss, our mission is to help businesses maintain clean, efficient email lists that drive results. We understand the critical role that email marketing plays in modern business success, and we're committed to providing the tools and technology needed to optimize email campaigns.
+          </p>
+          <p class="text-lg text-primary-700 mb-8">
+            Founded with a vision to make email list management simpler and more effective, we've developed cutting-edge verification technology that helps businesses of all sizes improve their email deliverability and protect their sender reputation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-16 bg-primary-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-primary-900 mb-12 text-center">Our Core Values</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <Icon name="lucide:shield" class="w-12 h-12 text-primary-500 mb-4" />
+            <h3 class="text-xl font-bold text-primary-900 mb-4">Data Security</h3>
+            <p class="text-primary-700">
+              We prioritize the security and privacy of your data, implementing industry-leading protection measures.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <Icon name="lucide:zap" class="w-12 h-12 text-primary-500 mb-4" />
+            <h3 class="text-xl font-bold text-primary-900 mb-4">Innovation</h3>
+            <p class="text-primary-700">
+              We continuously improve our technology to provide the most accurate and efficient email verification service.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <Icon name="lucide:users" class="w-12 h-12 text-primary-500 mb-4" />
+            <h3 class="text-xl font-bold text-primary-900 mb-4">Customer Success</h3>
+            <p class="text-primary-700">
+              Your success is our success. We're dedicated to providing exceptional support and guidance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-primary-900 mb-12 text-center">Our Leadership Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div class="text-center">
+            <div class="w-48 h-48 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <Icon name="lucide:user" class="w-24 h-24 text-primary-500" />
+            </div>
+            <h3 class="text-xl font-bold text-primary-900">John Smith</h3>
+            <p class="text-primary-700">CEO & Founder</p>
+          </div>
+          <div class="text-center">
+            <div class="w-48 h-48 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <Icon name="lucide:user" class="w-24 h-24 text-primary-500" />
+            </div>
+            <h3 class="text-xl font-bold text-primary-900">Sarah Johnson</h3>
+            <p class="text-primary-700">CTO</p>
+          </div>
+          <div class="text-center">
+            <div class="w-48 h-48 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <Icon name="lucide:user" class="w-24 h-24 text-primary-500" />
+            </div>
+            <h3 class="text-xl font-bold text-primary-900">Michael Chen</h3>
+            <p class="text-primary-700">Head of Customer Success</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-16 bg-primary-900 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+        <p class="text-xl mb-8 text-primary-100">
+          Join thousands of businesses that trust MailFloss for their email verification needs.
+        </p>
+        <a href="https://mailfloss.com/pricing/?fp_ref=maxime-emmanuel48" class="bg-white text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors inline-flex items-center gap-2">
+          Start Free Trial
+          <Icon name="lucide:arrow-right" class="w-5 h-5" />
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>

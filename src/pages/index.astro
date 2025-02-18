@@ -1,11 +1,526 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout>
-	<Welcome />
+  <!-- Navigation Bar -->
+  <nav class="fixed w-full top-0 z-50 bg-gradient-to-r from-primary-600 to-primary-700 shadow-lg">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-4">
+          <img src="https://landing-page-images-seo.s3.eu-north-1.amazonaws.com/mailFloss.png" alt="MailFloss Logo" class="h-8 w-auto" />
+          <span class="text-white text-xl font-bold">MailFloss</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="https://mailfloss.com/?fp_ref=maxime-emmanuel48" class="text-white hover:text-primary-100 transition-colors">Learn More</a>
+          <a href="https://mailfloss.com/?fp_ref=maxime-emmanuel48" class="bg-white text-primary-600 px-4 py-2 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
+            Start Free Trial
+          </a>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white hover:text-primary-100 p-2">
+            <Icon name="lucide:menu" class="w-6 h-6" />
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col space-y-4">
+          <a href="https://mailfloss.com/?fp_ref=maxime-emmanuel48" class="text-white hover:text-primary-100 transition-colors">Learn More</a>
+          <a href="https://mailfloss.com/?fp_ref=maxime-emmanuel48" class="bg-white text-primary-600 px-4 py-2 rounded-lg font-semibold hover:bg-primary-50 transition-colors inline-block text-center">
+            Start Free Trial
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Add padding to main content to account for fixed navbar -->
+  <main class="pt-16 relative z-0">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-white pt-20 pb-32">
+      <!-- Animated background blobs -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-white opacity-20 rounded-full filter blur-3xl animate-blob"></div>
+      <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-white opacity-10 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-extrabold text-primary-900 mb-8">
+            Keep Your Email List Clean & Deliverable with MailFloss
+          </h1>
+          <p class="text-xl md:text-2xl text-primary-700 mb-6 max-w-2xl mx-auto leading-relaxed">
+            Improve your email deliverability, protect your sender reputation, and save money with our powerful email verification service.
+          </p>
+          <p class="text-lg text-primary-700 mb-6 max-w-2xl mx-auto">
+            Our advanced algorithms and real-time verification ensure that your emails reach the inbox, not the spam folder. With MailFloss, you can trust that your email campaigns will be more effective and your sender reputation will remain strong.
+          </p>
+          <p class="text-lg text-primary-700 mb-12 max-w-2xl mx-auto">
+            Start your 7-day free trial today and experience the difference clean data can make in your email marketing efforts.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://mailfloss.com/pricing/?fp_ref=maxime-emmanuel48" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold rounded-full shadow-lg transition-transform hover:scale-105 bg-primary-600 text-white">
+              Start Free Trial
+              <Icon name="lucide:arrow-right" class="w-5 h-5" />
+            </a>
+            <a href="#features" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold rounded-full shadow-lg transition-transform hover:scale-105 bg-white text-primary-600 border-2 border-primary-600">
+              Explore Features
+              <Icon name="lucide:chevron-down" class="w-5 h-5" />
+            </a>
+          </div>
+          <p class="mt-6 text-primary-600">No credit card required • 7-day free trial</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="p-6">
+            <p class="text-4xl font-bold text-primary-600 mb-2">99.9%</p>
+            <p class="text-primary-700">Accuracy Rate</p>
+          </div>
+          <div class="p-6">
+            <p class="text-4xl font-bold text-primary-600 mb-2">10M+</p>
+            <p class="text-primary-700">Emails Verified</p>
+          </div>
+          <div class="p-6">
+            <p class="text-4xl font-bold text-primary-600 mb-2">24/7</p>
+            <p class="text-primary-700">Support Available</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA 1 -->
+    <section class="py-12 bg-primary-50">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-primary-900 mb-4">Ready to Improve Your Email Deliverability?</h2>
+        <p class="text-xl text-primary-700 mb-6 max-w-2xl mx-auto">
+          Start your journey to better email marketing performance today.
+        </p>
+        <a href="https://mailfloss.com/?fp_ref=maxime-emmanuel48" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold rounded-full shadow-lg transition-transform hover:scale-105 bg-primary-600 text-white">
+          Get Started Now
+          <Icon name="lucide:arrow-right" class="w-5 h-5" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-gradient-to-b from-white to-primary-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary-900 mb-4">
+            Powerful Email Verification Features
+          </h2>
+          <p class="text-xl text-primary-700 max-w-2xl mx-auto">
+            Everything you need to maintain a healthy email list and improve your email marketing ROI
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              icon: 'lucide:check-circle',
+              title: 'Real-Time Verification',
+              description: 'Verify email addresses in real-time as they are added to your list'
+            },
+            {
+              icon: 'lucide:shield',
+              title: 'Spam Trap Detection',
+              description: 'Identify and remove spam traps before they harm your sender reputation'
+            },
+            {
+              icon: 'lucide:zap',
+              title: 'Bulk Verification',
+              description: 'Clean your entire email list with our high-speed bulk verification system'
+            },
+            {
+              icon: 'lucide:activity',
+              title: 'Syntax Validation',
+              description: 'Catch typos and formatting errors before they become bounces'
+            },
+            {
+              icon: 'lucide:database',
+              title: 'Domain Validation',
+              description: 'Verify domain existence and check MX records automatically'
+            },
+            {
+              icon: 'lucide:bar-chart',
+              title: 'Detailed Reports',
+              description: 'Receive comprehensive reports detailing your email list health, verification results, and actionable insights to improve your email marketing strategy.'
+            },
+            {
+              icon: 'lucide:users',
+              title: 'User-Friendly Interface',
+              description: 'Our intuitive and easy-to-navigate interface ensures that you can manage your email lists efficiently without any hassle.'
+            }
+          ].map(feature => (
+            <div class="card hover:shadow-xl transition-shadow duration-300">
+              <Icon name={feature.icon} class="w-12 h-12 text-primary-500 mb-4" />
+              <h3 class="text-xl font-semibold text-primary-900 mb-2">{feature.title}</h3>
+              <p class="text-primary-700">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA 2 -->
+    <section class="py-12 bg-gradient-to-r from-primary-50 to-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-primary-900 mb-4">Don't Let Bad Email Data Hold You Back</h2>
+        <p class="text-xl text-primary-700 mb-6 max-w-2xl mx-auto">
+          Join thousands of businesses that trust MailFloss for their email verification needs.
+        </p>
+        <a href="https://mailfloss.com/?fp_ref=maxime-emmanuel48" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold rounded-full shadow-lg transition-transform hover:scale-105 bg-primary-600 text-white">
+          Try MailFloss Free
+          <Icon name="lucide:arrow-right" class="w-5 h-5" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary-900 mb-4">
+            Why Choose MailFloss?
+          </h2>
+          <p class="text-xl text-primary-700 max-w-2xl mx-auto">
+            Join thousands of businesses that trust MailFloss to keep their email lists clean
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {[
+            {
+              icon: 'lucide:trending-up',
+              title: 'Improved Deliverability',
+              description: 'Boost your email deliverability rates by removing invalid and risky email addresses'
+            },
+            {
+              icon: 'lucide:dollar-sign',
+              title: 'Cost Savings',
+              description: 'Reduce email marketing costs by eliminating bounces and invalid addresses'
+            },
+            {
+              icon: 'lucide:shield-check',
+              title: 'Protected Reputation',
+              description: 'Maintain a strong sender reputation by avoiding spam traps, invalid emails, and potential blacklisting. Our service ensures your emails are delivered to the inbox, not the spam folder.'
+            },
+            {
+              icon: 'lucide:clock',
+              title: 'Time Efficiency',
+              description: 'Save hours of manual work with our automated verification system. Focus on your core business while we handle the technical details of maintaining a clean email list.'
+            },
+            {
+              icon: 'lucide:thumbs-up',
+              title: 'Customer Satisfaction',
+              description: 'Ensure high customer satisfaction by delivering emails that actually reach your audience. Our service guarantees that your messages are seen by real people, not bots or invalid addresses.'
+            }
+          ].map(benefit => (
+            <div class="flex gap-4 p-6 bg-primary-50 rounded-lg">
+              <Icon name={benefit.icon} class="w-8 h-8 text-primary-500 flex-shrink-0" />
+              <div>
+                <h3 class="text-lg font-semibold text-primary-900 mb-2">{benefit.title}</h3>
+                <p class="text-primary-700">{benefit.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry-Leading Accuracy Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+                Industry-Leading Accuracy: <span class="text-primary-500">The Science Behind Clean Lists</span>
+            </h2>
+            <p class="text-gray-600 text-center mb-8">
+                Go beyond basic validation. Mailfloss employs a multi-layered verification system and AI-driven technology to achieve unmatched accuracy, ensuring you're only reaching real customers.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-center justify-center">
+                    <Icon name="lucide:badge-check" class="w-12 h-12 text-primary-500 mb-4" />
+                    <h3 class="text-xl font-semibold mb-2 text-center">99.9% Accuracy Rate</h3>
+                    <p class="text-gray-600 text-center">Our multi-layered verification ensures unparalleled precision.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-center justify-center">
+                    <Icon name="lucide:layers" class="w-12 h-12 text-primary-500 mb-4" />
+                    <h3 class="text-xl font-semibold mb-2 text-center">Multi-Layered System</h3>
+                    <p class="text-gray-600 text-center">Combining 27+ checks for comprehensive validation.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-center justify-center">
+                    <Icon name="lucide:brain" class="w-12 h-12 text-primary-500 mb-4" />
+                    <h3 class="text-xl font-semibold mb-2 text-center">AI-Driven Typo Fixer</h3>
+                    <p class="text-gray-600 text-center">Intelligently corrects misspellings to recover real leads.</p>
+                </div>
+            </div>
+            <p class="text-gray-600 text-center mt-8 max-w-2xl mx-auto">
+                Mailfloss isn't just about quantity; it's about the quality of your list.  Reach real customers and maximize engagement with our scientifically-backed accuracy.
+            </p>
+        </div>
+    </section>
+
+    <!-- Integrations Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+                Integrations That <span class="text-primary-500">Supercharge Your Workflow</span>
+            </h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Mailfloss seamlessly connects with the tools you already use, from leading CRMs and ESPs to marketing automation platforms. Simplify your email list cleaning without disrupting your existing setup.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
+                <div class="flex items-center justify-center p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <Icon name="simple-icons:mailchimp" class="h-12 w-auto grayscale hover:grayscale-0 transition-all" />
+                </div>
+                <div class="flex items-center justify-center p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <Icon name="simple-icons:hubspot" class="h-12 w-auto grayscale hover:grayscale-0 transition-all" />
+                </div>
+                <div class="flex items-center justify-center p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <Icon name="simple-icons:salesforce" class="h-12 w-auto grayscale hover:grayscale-0 transition-all" />
+                </div>
+                {/* Add more integration logos here - you can use simple-icons:provider-name for many ESPs/CRMs via astro-icon */}
+                <div class="flex items-center justify-center p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <div class="h-12 w-12 rounded-full bg-gray-200 text-gray-600 font-bold flex items-center justify-center">
+                        35+ More
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-600 text-center mt-8 max-w-2xl mx-auto">
+                Focus on your marketing strategy, not manual data cleanup. Mailfloss operates seamlessly in the background of your existing workflows.
+            </p>
+            <div class="text-center mt-6">
+                <a href="https://mailfloss.com/integrations/?fp_ref=maxime-emmanuel48" class="inline-flex items-center text-primary-500 hover:underline font-medium">
+                    View All Integrations <Icon name="lucide:arrow-right" class="w-4 h-4 ml-1" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted by Businesses Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+                Trusted by Businesses of All Sizes, <span class="text-primary-500">Across All Industries</span>
+            </h2>
+            <p class="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                From startups to enterprises, Mailfloss delivers scalable solutions for every business that relies on healthy email communication. See how we're making a difference across diverse sectors.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <Icon name="lucide:store" class="w-8 h-8 text-primary-500 mb-4" />
+                    <h3 class="text-xl font-semibold mb-2">E-commerce</h3>
+                    <p class="text-gray-600">Boost conversions by ensuring promotional emails reach customers' inboxes, not spam folders.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <Icon name="lucide:briefcase" class="w-8 h-8 text-primary-500 mb-4" />
+                    <h3 class="text-xl font-semibold mb-2">Agencies</h3>
+                    <p class="text-gray-600">Improve client campaign performance and maintain high deliverability for agency reputation.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <Icon name="lucide:rocket" class="w-8 h-8 text-primary-500 mb-4" />
+                    <h3 class="text-xl font-semibold mb-2">SaaS</h3>
+                    <p class="text-gray-600">Ensure critical onboarding and engagement emails are delivered to new and existing users.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <Icon name="lucide:building-2" class="w-8 h-8 text-primary-500 mb-4" />
+                    <h3 class="text-xl font-semibold mb-2">Enterprises</h3>
+                    <p class="text-gray-600">Maintain impeccable sender reputation and compliance across large-scale email operations.</p>
+                </div>
+            </div>
+
+            <p class="text-gray-600 text-center mt-8 max-w-2xl mx-auto">
+                No matter your business size or industry, Mailfloss scales to meet your needs and improve your email marketing ROI.
+            </p>
+        </div>
+    </section>
+
+    <!-- Detailed Reporting Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+                Unlock Deeper Insights with <span class="text-primary-500">Detailed Reporting</span>
+            </h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Go beyond simple validation counts. Mailfloss provides comprehensive reports and analytics on your email list health, highlighting areas for improvement and demonstrating ROI.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg shadow-sm border-2 border-dashed border-gray-200">
+                    <img src="https://landing-page-images-seo.s3.eu-north-1.amazonaws.com/d1_mail.png" alt="Example Report 1" class="rounded-md mb-4 w-full h-auto object-contain" />
+                    <h3 class="text-xl font-semibold mb-2">Deliverability Metrics</h3>
+                    <p class="text-gray-600">Track key metrics like bounce rate, spam complaints, and inbox placement over time.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-sm border-2 border-dashed border-gray-200">
+                    <img src="https://landing-page-images-seo.s3.eu-north-1.amazonaws.com/d2_mail.png" alt="Example Report 2" class="rounded-md mb-4 w-full h-auto object-contain" />
+                    <h3 class="text-xl font-semibold mb-2">List Health Breakdown</h3>
+                    <p class="text-gray-600">Understand the composition of your list with categorized email statuses (valid, invalid, risky).</p>
+                </div>
+            </div>
+
+            <p class="text-gray-600 text-center mt-8 max-w-2xl mx-auto">
+                Make data-driven decisions to optimize your email marketing strategy and demonstrate the value of list cleaning to your team.
+            </p>
+            <div class="text-center mt-6">
+                <a href="https://mailfloss.com/?fp_ref=maxime-emmanuel48" class="inline-flex items-center text-primary-500 hover:underline font-medium">
+                    Explore Sample Reports <Icon name="lucide:arrow-right" class="w-4 h-4 ml-1" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-primary-800 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-6">Ready to Clean Your Email List?</h2>
+        <p class="text-xl text-primary-100 mb-4 max-w-2xl mx-auto">
+          Start your 7-day free trial today and see the difference clean data can make.
+        </p>
+        <p class="text-lg text-primary-100 mb-8 max-w-2xl mx-auto">
+          With our advanced email verification service, you can ensure that your email campaigns are more effective, your sender reputation remains strong, and your marketing efforts yield better results. Don't miss out on the opportunity to optimize your email strategy.
+        </p>
+        <a href="https://mailfloss.com/pricing/?fp_ref=maxime-emmanuel48" class="btn-white inline-flex items-center justify-center gap-2">
+          Get Started Now
+          <Icon name="lucide:arrow-right" class="w-5 h-5" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-primary-100 py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2">
+                <Icon name="lucide:phone" class="w-4 h-4" />
+                <a href="tel:+18001340961" class="hover:text-white transition-colors">(800) 134-0961</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <Icon name="lucide:mail" class="w-4 h-4" />
+                <a href="mailto:hello@mailfloss.com" class="hover:text-white transition-colors">hello@mailfloss.com</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <Icon name="lucide:map-pin" class="w-4 h-4" />
+                <span>110 Capital Dr, Knoxville, TN 37922</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://www.youtube.com/c/Mailfloss" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
+                  <Icon name="simple-icons:youtube" class="w-4 h-4" />
+                  YouTube
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/mailfloss/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
+                  <Icon name="simple-icons:facebook" class="w-4 h-4" />
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/mailfloss" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
+                  <Icon name="simple-icons:instagram" class="w-4 h-4" />
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://x.com/mailfloss" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
+                  <Icon name="simple-icons:x" class="w-4 h-4" />
+                  Twitter
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Product</h3>
+            <ul class="space-y-2">
+              <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+              <li><a href="https://mailfloss.com/pricing/?fp_ref=maxime-emmanuel48" class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="https://mailfloss.com/integrations/?fp_ref=maxime-emmanuel48" class="hover:text-white transition-colors">Integrations</a></li>
+              <li><a href="https://mailfloss.com/?fp_ref=maxime-emmanuel48" class="hover:text-white transition-colors">API</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Company</h3>
+            <ul class="space-y-2">
+              <li><a href="/about" class="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="https://mailfloss.com/?fp_ref=maxime-emmanuel48" class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-primary-800 mt-12 pt-8 text-center">
+          <p>&copy; {new Date().getFullYear()} MailFloss. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
 </Layout>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: scale(1) translate(0px, 0px);
+    }
+    33% {
+      transform: scale(1.1) translate(20px, -20px);
+    }
+    66% {
+      transform: scale(0.9) translate(-20px, 20px);
+    }
+    100% {
+      transform: scale(1) translate(0px, 0px);
+    }
+  }
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .neon-text {
+    text-shadow: 0 0 5px #4ade80, 0 0 10px #4ade80, 0 0 15px #4ade80;
+  }
+  .neon-border {
+    box-shadow: 0 0 5px #4ade80, 0 0 10px #4ade80, 0 0 15px #4ade80;
+    border: 2px solid #4ade80;
+  }
+  .btn-primary {
+    @apply bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors;
+  }
+  .btn-secondary {
+    @apply bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors;
+  }
+  .btn-white {
+    @apply bg-white text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors;
+  }
+  .card {
+    @apply bg-white p-8 rounded-lg border border-primary-100;
+  }
+</style>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>
