@@ -1,9 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
+
+const pageTitle = "About MailFloss - Email Verification Experts";
+const pageDescription = "Discover how MailFloss helps businesses worldwide maintain clean email lists and improve deliverability. Learn about our mission, technology, and commitment to email marketing success.";
 ---
 
-<Layout title="About Us - MailFloss" description="Learn about MailFloss's mission to provide the best email verification service">
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  ogImage="https://landing-page-images-seo.s3.eu-north-1.amazonaws.com/mailFloss.png"
+>
   <main class="pt-16">
     <!-- Hero Section -->
     <section class="relative overflow-hidden bg-gradient-to-b from-primary-50 to-white pt-16 pb-32">

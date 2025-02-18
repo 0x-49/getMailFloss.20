@@ -1,9 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
+
+const pageTitle = "Privacy Policy - MailFloss Email Verification Service";
+const pageDescription = "Learn about MailFloss's commitment to protecting your data. Our comprehensive privacy policy outlines how we handle your information and ensure compliance with data protection regulations.";
 ---
 
-<Layout title="Privacy Policy - MailFloss" description="MailFloss's privacy policy and data protection commitments">
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  ogImage="https://landing-page-images-seo.s3.eu-north-1.amazonaws.com/mailFloss.png"
+>
   <main class="pt-16">
     <!-- Hero Section -->
     <section class="relative overflow-hidden bg-gradient-to-b from-primary-50 to-white pt-16 pb-12">

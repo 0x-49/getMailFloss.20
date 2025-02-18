@@ -1,9 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
+
+const pageTitle = "Terms of Service - MailFloss Email Verification";
+const pageDescription = "Review MailFloss's terms of service. Understand our service agreement, usage policies, and commitment to providing reliable email verification services to our customers.";
 ---
 
-<Layout title="Terms of Service - MailFloss" description="MailFloss's terms of service and usage agreement">
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  ogImage="https://landing-page-images-seo.s3.eu-north-1.amazonaws.com/mailFloss.png"
+>
   <main class="pt-16">
     <!-- Hero Section -->
     <section class="relative overflow-hidden bg-gradient-to-b from-primary-50 to-white pt-16 pb-12">

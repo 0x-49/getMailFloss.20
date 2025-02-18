@@ -1,9 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
+
+const pageTitle = "MailFloss - Professional Email List Cleaning & Verification Service";
+const pageDescription = "Boost your email marketing success with MailFloss. Our advanced email verification service helps reduce bounce rates, protect sender reputation, and improve deliverability. Start your free trial today!";
 ---
 
-<Layout>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  ogImage="https://landing-page-images-seo.s3.eu-north-1.amazonaws.com/mailFloss.png"
+>
   <!-- Navigation Bar -->
   <nav class="fixed w-full top-0 z-50 bg-gradient-to-r from-primary-600 to-primary-700 shadow-lg">
     <div class="container mx-auto px-4">
